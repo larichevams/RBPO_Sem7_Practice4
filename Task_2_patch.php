@@ -2,7 +2,7 @@
 
 if( isset( $_GET[ 'Submit' ] ) ) {
         // Get input
-        $id = $_GET[ 'id' ];
+        $id = real_escape_string($_GET[ 'id' ]);
 
         // Check database
         $getid  = "SELECT first_name, last_name FROM users WHERE user_id = '$id';";
