@@ -19,3 +19,8 @@ CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL
 Исправленный код в файле Task_2_patch.php. Статический анализатор SonarCloud не находит уязвимость, если изменить инициализацию переменной $id, добавив функцию real_escape_string(), которая экранирует специальные символы в строке для использования в SQL-выражении, используя текущий набор символов соединения:
 *$id = real_escape_string($_GET[ 'id' ])*
 ![image](https://github.com/larichevams/RBPO_Sem7_Practice4/assets/71451332/136ae444-0402-42f6-83c0-99834000201f)
+
+**Задание 4**
+Утилита sqlmap выявила, что поле 'id' в базе данных является уязвимым к SQL-инъекциям:
+![image](https://github.com/larichevams/RBPO_Sem7_Practice4/assets/71451332/f2367da0-a8d0-4c98-8d02-850b976d9d30)
+
